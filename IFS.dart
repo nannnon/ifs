@@ -37,12 +37,12 @@ class IFS {
         }
       }
 
-      double x = xn;
-      double y = yn;
+      final double x = xn;
+      final double y = yn;
       xn = _cofs[n][0] * x + _cofs[n][1] * y + _cofs[n][2];
       yn = _cofs[n][3] * x + _cofs[n][4] * y + _cofs[n][5];
 
-      double scale = 100;
+      const double scale = 100;
       int xp = (xn * scale + image.width / 2).round();
       int yp = image.height - 1 - (yn * scale + 32).round();
 
